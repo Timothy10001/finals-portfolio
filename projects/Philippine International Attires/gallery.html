@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/3.4.1/bootstrap.min.css">
+        <link href="./css/5.3.0/bootstrap.min.css" rel="stylesheet">
+        <script src="./js/5.3.0/bootstrap.bundle.min.js"></script>
+        <script src="./js/jquery-3.6.1.min.js"></script>
+        <script src="./js/3.4.1/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="./css/lightbox.css">
+        <script src="./js/lightbox-plus-jquery.min.js"></script>
+        <title>Gallery</title>
+        <style>
+
+            body{
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                background-color:aliceblue;
+            }
+    
+            .jumbotron{
+                background-image: url(./img/jumbotron/jumbotron-img-2.jpg);
+                background-size: cover;
+                background-position-y: 20%;
+				background-color: rgba(0, 0, 0, 0.5);
+				background-blend-mode: multiply;
+				padding: 10em;
+            }
+        
+            .navbar-brand{
+                font-family: Brush Script MT, cursive;
+                font-size: 35px;
+                letter-spacing: 3px;
+                font-weight: light;
+            
+            }
+    
+            .navbar-brand:hover, .navbar-brand:focus{
+                
+                color: #edc79b !important;
+                background-color: transparent !important;
+                transition: 0.5s;
+            }
+        
+            .nav-link{
+
+                font-size: 15px;
+            }
+            .img-fluid{
+                height: 30rem;
+                border-radius: 10px;
+                margin: 10px;
+            }
+
+            .img-fluid:hover{
+
+                outline: 7px solid rgba(240, 248, 255, 20);
+                transition: 0.2s;
+
+            }
+            
+            
+            
+
+        
+        
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-inverse navbar-expand-sm static-top">
+                <div class="container-fluid justify-content-start m-2">
+
+                
+                    <div class="navbar-header">
+                        <a href="index.html" class="navbar-brand p-3">Philippine Historical Attires</a>
+                    </div>
+            
+                    <ul class="navbar-nav">
+                        <li> <a href="index.html" class="nav-link">Home</a>
+                        <li> <a href="overview.html" class="nav-link">Overview</a> </li>
+                        <li> <a href="articles.html" class="nav-link">Articles</a> </li>
+                        <li> <a href="designers.html" class="nav-link">Designers</a> </li>
+                        <li class="active"> <a href="gallery.html" class="nav-link">Gallery</a> </li>
+                        
+                    </ul>
+                
+                </div>
+            </nav>
+        </header>
+
+        <div class="container" style="padding: 20px; background-color: #e76b7495; border-radius: 5px;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="jumbotron">
+                        <div class="text-white">
+                            <h1 class="display-1">Historical Attires Gallery</h1>
+                            <p class="lead">Philippine Fashion all throughout the years, from the Pre-Colonial Period, to present day.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!--Gallery-->
+                    <hr>
+                    <h1 class="display-3 bg-light rounded">Pre-colonial Period</h1>
+                    <hr class="mt-3">
+
+                    <div class="col-md-12 mb-3 text-center">
+                        <a href="./img/gallery/pre-colonial/baro-chief.png" data-lightbox="pre-colonial" data-title="Baro similar to those worn by a chief in the Pre-Colonial Period">
+                            <img src="./img/gallery/pre-colonial/baro-chief.png" alt="" class="img-fluid">
+                        </a>
+
+                        <a href="./img/gallery/pre-colonial/baro-man.png" data-lightbox="pre-colonial" data-title="Baro worn by Filipino Men">
+                            <img src="./img/gallery/pre-colonial/baro-man.png" alt="" class="img-fluid">
+                        </a>
+
+                        <a href="./img/gallery/pre-colonial/baro-woman.png" data-lightbox="pre-colonial" data-title="Baro worn by Filipino Women">
+                            <img src="./img/gallery/pre-colonial/baro-woman.png" alt="" class="img-fluid">
+                        </a>
+
+                        <a href="./img/gallery/pre-colonial/visayan-royalty.png" data-lightbox="pre-colonial" data-title="Visayan Royalty attire from the Boxer Codex">
+                            <img src="./img/gallery/pre-colonial/visayan-royalty.png" alt="" class="img-fluid">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!--Gallery-->
+                    <hr>
+                    <h1 class="display-3 bg-light rounded">Spanish Colonial Period</h1>
+                    <hr class="mt-3">
+
+                    <div class="col-md-12 mb-3 text-center">
+                        <a href="./img/gallery/spanish-era/baro-saya.png" data-lightbox="spanish-period" data-title="Baro't Saya">
+                            <img src="./img/gallery/spanish-era/baro-saya.png" alt="" class="img-fluid">
+                        </a>
+                        
+                        <a href="./img/gallery/spanish-era/baro-saya2.jpg" data-lightbox="spanish-period" data-title="Baro't Saya worn by two women">
+                            <img src="./img/gallery/spanish-era/baro-saya2.jpg" alt="" class="img-fluid">
+                        </a>
+
+                        <a href="./img/gallery/spanish-era/barong-tagalog.jpg" data-lightbox="spanish-period" data-title="illustration of Spanish Period Barong Tagalog">
+                            <img src="./img/gallery/spanish-era/barong-tagalog.jpg" alt="" class="img-fluid">
+                        </a>
+
+                        <a href="./img/gallery/spanish-era/barong-tagalog2.jpg" data-lightbox="spanish-period" data-title="Photo of Spanish-style Barong Tagalog">
+                            <img src="./img/gallery/spanish-era/barong-tagalog2.jpg" alt="" class="img-fluid">
+                        </a>
+
+                        <a href="./img/gallery/spanish-era/camisa-de-chino.jpg" data-lightbox="spanish-period" data-title="illustration of three men holding cock-fight chickens wearing Camisa de Chinos">
+                            <img src="./img/gallery/spanish-era/camisa-de-chino.jpg" alt="" class="img-fluid">
+                        </a>
+
+                        <a href="./img/gallery/spanish-era/maria-clara-gown.jpg" data-lightbox="spanish-period" data-title="Maria Clara Gown">
+                            <img src="./img/gallery/spanish-era/maria-clara-gown.jpg" alt="" class="img-fluid">
+                        </a>
+
+                        <a href="./img/gallery/spanish-era/maria-clara-gown2.jpg" data-lightbox="spanish-period" data-title="Maria Clara Gown">
+                            <img src="./img/gallery/spanish-era/maria-clara-gown2.jpg" alt="" class="img-fluid">
+                        </a>
+
+                        <a href="./img/gallery/spanish-era/panuelo.jpg" data-lightbox="spanish-period" data-title="Panuelo worn over the shoulders">
+                            <img src="./img/gallery/spanish-era/panuelo.jpg" alt="" class="img-fluid">
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!--Gallery-->
+                    <hr>
+                    <h1 class="display-3 bg-light rounded">American Era</h1>
+                    <hr class="mt-3">
+
+                    <div class="col-md-12 mb-3 text-center">
+                        <a href="./img/gallery/american-era/americana.jpg" data-lightbox="american-period" data-title="Three men wearing Americanas">
+                            <img src="./img/gallery/american-era/americana.jpg" alt="" class="img-fluid">
+                        </a>
+                        
+                        <a href="./img/gallery/american-era/americana2.jpg" data-lightbox="american-period" data-title="Four men wearing Americanas">
+                            <img src="./img/gallery/american-era/americana2.jpg" alt="" class="img-fluid">
+                        </a>
+
+                        <a href="./img/gallery/american-era/americana3.jpg" data-lightbox="american-period" data-title="A group of men wearing Americanas">
+                            <img src="./img/gallery/american-era/americana3.jpg" alt="" class="img-fluid">
+                        </a>
+
+                        <a href="./img/gallery/american-era/americana4.jpg" data-lightbox="american-period" data-title="A group of people wearing Americanas and Traje de Mestiza">
+                            <img src="./img/gallery/american-era/americana4.jpg" alt="" class="img-fluid">
+                        </a>
+
+                        <a href="./img/gallery/american-era/traje-de-mestiza.jpg" data-lightbox="american-period" data-title="Traje de Mestiza">
+                            <img src="./img/gallery/american-era/traje-de-mestiza.jpg" alt="" class="img-fluid">
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!--Gallery-->
+                    <hr>
+                    <h1 class="display-3 bg-light rounded">1950s</h1>
+                    <hr class="mt-3">
+
+                    <div class="col-md-12 mb-3 text-center">
+                        <a href="./img/gallery/1950s/floral-dress.jpg" data-lightbox="1950s" data-title="A group of women wearing their Floral Dresses">
+                            <img src="./img/gallery/1950s/floral-dress.jpg" alt="" class="img-fluid">
+                        </a>
+                        
+                        <a href="./img/gallery/1950s/floral-skirts.jpg" data-lightbox="1950s" data-title="Three women wearing their Summer Dresses">
+                            <img src="./img/gallery/1950s/floral-skirts.jpg" alt="" class="img-fluid">
+                        </a>
+
+                        <a href="./img/gallery/1950s/people.jpg" data-lightbox="1950s" data-title="A shopping center filled with floral dresses">
+                            <img src="./img/gallery/1950s/people.jpg" alt="" class="img-fluid">
+                        </a>
+
+                        <a href="./img/gallery/1950s/people2.jpg" data-lightbox="1950s" data-title="Men and women dressed formally for an event">
+                            <img src="./img/gallery/1950s/people2.jpg" alt="" class="img-fluid">
+                        </a>
+
+                        <a href="./img/gallery/1950s/people3.jpg" data-lightbox="1950s" data-title="Formal wear at a wedding">
+                            <img src="./img/gallery/1950s/people3.jpg" alt="" class="img-fluid">
+                        </a>
+
+                        <a href="./img/gallery/1950s/people4.jpg" data-lightbox="1950s" data-title="Manila during the 1950s">
+                            <img src="./img/gallery/1950s/people4.jpg" alt="" class="img-fluid">
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!--Gallery-->
+                    <hr>
+                    <h1 class="display-3 bg-light rounded">Modern Day</h1>
+                    <hr class="mt-3">
+
+                    <div class="col-md-12 mb-3 text-center">
+                        <a href="./img/gallery/modern-day/CM-works1.jpg" data-lightbox="modern-day" data-title="The red handloomed Ifugao bahag dresses worn by men and women designed by Caroline Mangosing.">
+                            <img src="./img/gallery/modern-day/CM-works1.jpg" alt="" class="img-fluid">
+                        </a>
+                        
+                        <a href="./img/gallery/modern-day/CM-works2.jpg" data-lightbox="modern-day" data-title="The handloomed Ifugao Track Suit designed by Caroline Mangosing.">
+                            <img src="./img/gallery/modern-day/CM-works2.jpg" alt="" class="img-fluid">
+                        </a>
+
+                        <a href="./img/gallery/modern-day/ESG-works.jpg" data-lightbox="modern-day" data-title="The different dresses inspired by the Baro't Saya designed by Edgar San Diego in his solo exhibition.">
+                            <img src="./img/gallery/modern-day/ESG-works.jpg" alt="" class="img-fluid">
+                        </a>
+
+                        <a href="./img/gallery/modern-day/FL-works-2022.jpg" data-lightbox="modern-day" data-title="The 2022 SEA Games Barong Tagalog uniform with an eagle embroidery designed by Francis Libiran.">
+                            <img src="./img/gallery/modern-day/FL-works-2022.jpg" alt="" class="img-fluid">
+                        </a>
+                        
+                        <a href="./img/gallery/modern-day/FL-works.jpg" data-lightbox="modern-day" data-title="American actress Nikki Reed wearing a gown designed by Francis Libiran.">
+                            <img src="./img/gallery/modern-day/FL-works.jpg" alt="" class="img-fluid">
+                        </a>
+
+                        <a href="./img/gallery/modern-day/FL-works2019.jpeg" data-lightbox="modern-day" data-title="The 2019 SEA Games Barong Tagalog uniform with the sun rays of the Philippine flag designed by Francis Libiran.">
+                            <img src="./img/gallery/modern-day/FL-works2019.jpeg" alt="" class="img-fluid">
+                        </a>
+
+                        <a href="./img/gallery/modern-day/LQ-works1.jpg" data-lightbox="modern-day" data-title="The women's apparel created with uncommon Filipino textiles and inspired by the Malong designed by Lydia Queiran.">
+                            <img src="./img/gallery/modern-day/LQ-works1.jpg" alt="" class="img-fluid">
+                        </a>
+
+                        <a href="./img/gallery/modern-day/LQ-works2.jpg" data-lightbox="modern-day" data-title="The men's apparel created with uncommon Filipino textiles and inspired by the Malong designed by Lydia Queiran.">
+                            <img src="./img/gallery/modern-day/LQ-works2.jpg" alt="" class="img-fluid">
+                        </a>
+
+                        <a href="./img/gallery/modern-day/MPP-works1.jpg" data-lightbox="modern-day" data-title="A variation in the women's 20 piece Barong with T'nalak embroidery and Mindanao Silk designed by Mimi Parrel-Pimentel.">
+                            <img src="./img/gallery/modern-day/MPP-works1.jpg" alt="" class="img-fluid">
+                        </a>
+
+                        <a href="./img/gallery/modern-day/MPP-works2.jpg" data-lightbox="modern-day" data-title="A variation in the women's 20 piece Barong with T'nalak embroidery and Mindanao Silk designed by Mimi Parrel-Pimentel.">
+                            <img src="./img/gallery/modern-day/MPP-works2.jpg" alt="" class="img-fluid">
+                        </a>
+
+                        <a href="./img/gallery/modern-day/PJA-works1.jpg" data-lightbox="modern-day" data-title="Attires for men and women inspired by the Patadyong designed by Percy Arañador.">
+                            <img src="./img/gallery/modern-day/PJA-works1.jpg" alt="" class="img-fluid">
+                        </a>
+
+                        <a href="./img/gallery/modern-day/PJA-works2.jpg" data-lightbox="modern-day" data-title="Attires for men and women inspired by the Patadyong designed by Percy Arañador.">
+                            <img src="./img/gallery/modern-day/PJA-works2.jpg" alt="" class="img-fluid">
+                        </a>
+
+                        <a href="./img/gallery/modern-day/VMB-works1.jpg" data-lightbox="modern-day" data-title="Custom made Balik Batik Coat Barong designed by Veronica Mae Baguio.">
+                            <img src="./img/gallery/modern-day/VMB-works1.jpg" alt="" class="img-fluid">
+                        </a>
+
+                        <a href="./img/gallery/modern-day/VMB-works2.jpg" data-lightbox="modern-day" data-title="Custom made Barong featuring Inaul designed by Veronica Mae Baguio.">
+                            <img src="./img/gallery/modern-day/VMB-works2.jpg" alt="" class="img-fluid">
+                        </a>
+
+                        <a href="./img/gallery/modern-day/VMB-works3.jpg" data-lightbox="modern-day" data-title="Bespoke Balik Batik Barong and matching sablay featuring Inaul designed by Veronica Mae Baguio.">
+                            <img src="./img/gallery/modern-day/VMB-works3.jpg" alt="" class="img-fluid">
+                        </a>
+
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </body>
+</html>

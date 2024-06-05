@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/3.4.1/bootstrap.min.css">
+        <link href="./css/5.3.0/bootstrap.min.css" rel="stylesheet">
+        <script src="./js/5.3.0/bootstrap.bundle.min.js"></script>
+        <script src="./js/jquery-3.6.1.min.js"></script>
+        <script src="./js/3.4.1/bootstrap.min.js"></script>
+        <title>Articles</title>
+        
+        
+
+        <style>
+
+            body{
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                background-color:aliceblue;
+            }
+        
+            .jumbotron{
+                background-image: src("...");
+                background-size: cover;
+            }
+            
+            .navbar-brand{
+                font-family: Brush Script MT, cursive;
+                font-size: 35px;
+                letter-spacing: 3px;
+                font-weight: light;
+                
+            }
+        
+            .navbar-brand:hover, .navbar-brand:focus{
+                    
+                color: #edc79b !important;
+                background-color: transparent !important;
+                transition: 0.5s;
+            }
+            
+            .nav-link{
+
+                font-size: 15px;
+            }
+
+            .lead{
+                font-size: 1.5rem !important;
+                letter-spacing: 1px;
+            }
+
+            .wrapper{
+                margin-top: -20px;
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            #bg-img-1{
+                background-image: radial-gradient(transparent, black), url(./img/article-img/barong-tagalog-pre-colonial.png);
+            }
+
+            #bg-img-2{
+                background-image: radial-gradient(transparent, black), url(./img/article-img/baro-saya.jpg);
+            }
+
+            #bg-img-3{
+                background-image: radial-gradient(transparent, black), url(./img/article-img/lufid.jpg);
+            }
+
+            #bg-img-4{
+                background-image: radial-gradient(transparent, black), url(./img/article-img/maria-clara.png);
+            }
+
+            #bg-img-5{
+                background-image: radial-gradient(transparent, black), url(./img/article-img/balintawak-dress.jpg);
+            }
+
+            #bg-img-6{
+                background-image: radial-gradient(transparent, black), url(./img/article-img/kimona.jpg);
+            }
+
+            #bg-img-7{
+                background-image: radial-gradient(transparent, black), url(./img/article-img/malong.png);
+            }
+
+            #bg-img-8{
+                background-image: radial-gradient(transparent, black), url(./img/article-img/hijab.jpg);
+            }
+
+            #topButton {
+                display: none;
+                position: fixed;
+                bottom: 20px;
+                right: 30px;
+                z-index: 99;
+                font-size: 18px;
+                border: none;
+                outline: none;
+                background-color: red;
+                color: white;
+                cursor: pointer;
+                padding: 15px;
+                border-radius: 4px;
+                
+            }
+
+            #topButton:hover {
+                transition: .2s;
+                background-color: #e76b74;
+            }
+
+            
+
+            
+            
+            
+        </style>
+    </head>
+    <body>
+
+        
+
+       
+        <header>
+            <nav class="navbar navbar-inverse navbar-expand-sm static-top">
+                <div class="container-fluid justify-content-start m-2">
+
+                
+                    <div class="navbar-header">
+                        <a href="index.html" class="navbar-brand p-3">Philippine Historical Attires</a>
+                    </div>
+            
+                    <ul class="navbar-nav">
+                        <li> <a href="index.html" class="nav-link">Home</a>
+                        <li> <a href="overview.html" class="nav-link">Overview</a> </li>
+                        <li class="active"> <a href="articles.html" class="nav-link">Articles</a> </li>
+                        <li> <a href="designers.html" class="nav-link">Designers</a> </li>
+                        <li> <a href="gallery.html" class="nav-link">Gallery</a> </li>
+                        
+                    </ul>
+                
+                </div>
+            </nav>
+        </header>
+
+        
+
+        <button id="topButton" onclick="topFunction()">Scroll back to top</button>
+
+        <script>
+
+            let scrollbutton = document.getElementById("topButton")
+
+            // When the user scrolls down 200px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollbutton.style.display = "block";
+            } else {
+                scrollbutton.style.display = "none";
+            }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            } 
+
+        </script>
+        
+
+        <!--Article 1-->
+        <div class="wrapper" id="bg-img-1">
+            <div class="container" style="padding: 20px; background-color: #ea526f95;">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div id="barong-tagalog" class="bg-light p-5">
+                            
+                            <h2 class="display-4  text-center">The Evolution of the Barong Tagalog</h2>
+                            <br>
+                            <p class="text-center"><span><img class="img-fluid" src="img/article-img/barong-tagalog-pre-colonial.png" alt="Barong Tagalog" style="max-height: 300px;"></span></p>
+                            <p class="text-center">"Baro" worn by the man on the left from the Boxer Codex (c.1590)</p>
+                            <br>
+                            <h3 class="fst-italic">10th to 16th Century (Pre-Colonial Period)</h3>
+                            <br><br>
+                            <p class="lead text-justify">
+                                The <b>barong tagalog</b> came from the Tagalog word baro, which means "shirt" or "clothes" and is also known as "bar" or "bay" in other Philippine languages. In the pre-colonial Philippines, both men and women wore basic collarless shirts or jackets with tightly fitting long sleeves. 
+                                These were created from imported fabrics woven from materials including silk, cotton, and kapok, as well as rough linen-like cloth produced from local abacá fiber.
+                                They were frequently worn by Tagalog men with the salaual or salawal, a rectangular piece of elaborately decorated clothing that was knee-length and brought up in the middle (similar to the Indian dhoti or the Thai and Cambodian sompot chong kben).     
+                            </p>
+                            
+                            <br>
+                            
+                            <p class="text-center"><span><img class="img-fluid" src="img/article-img/barong-tagalog-spanish.jpg" alt="Barong Tagalog Spanish Colonial Period" style="max-height: 300px;"></span></p>
+                            <p class="text-center">The Barong Tagalog worn by working class commoners, with <em> esclavina</em> (rain capes) and <em>salakot</em> (headwear) (c.1855)</p>
+                            <br>
+                            <h3 class="fst-italic">1521 - 1899 (Spanish Colonial Period)</h3>
+                            <br><br>
+                            <p class="lead text-justify">
+                                From the 16th to the 18th centuries, early records of clothing in the Philippines during the Spanish colonial era were few, making it difficult to pinpoint exactly how the precolonial baro evolved into the current barong tagalog.
+                                However, based on depictions and written descriptions, baro were still mainly reserved for commoners throughout this time.
+                                Since they were made of opaque abacá fibers similar to linen and were largely identical to precolonial baro, they lacked the collars, buttons, and embroidery of later baro styles. 
+                            </p>
+
+                            <br>
+
+
+                            <p class="text-center"><span><img class="img-fluid" src="img/article-img/barong-tagalog.jpg" alt="Barong Tagalog worn by President Manuel Quezon" style="max-height: 300px;"></span></p>
+                            <p class="text-center">The Barong Tagalog worn by President Manuel Quezon (c. 1935)</p>
+                            <br>
+                            <h3 class="fst-italic">1899 - 1946 (American Colonial Period and the Commonwealth Period)</h3>
+                            <br><br>
+                            <p class="lead text-justify">
+                                During the American colonial era, barong tagalog's appeal further declined.
+                                In most formal settings, it was replaced by suits (referred to as Americana in the Philippines) and tuxedos.
+                                Women continued to wear the local terno, which is a modernized and unified version of the baro't saya and was historically connected to suffragists.
+                                However, barro cerrada remained common among casual leisure wearers. President Manuel L. Quezon's "Commonwealth Barong Tagalog," which had the flags of the Commonwealth of the Philippines and the United States embroidered on it, was a notable barong tagalog from this era.
+                                Apart from this, Quezon primarily donned formal attire in the American style and did not advocate the barong tagalog. 
+                            </p>
+                            
+                            <br>
+
+                            <p class="text-center"><span><img class="img-fluid" src="img/article-img/barong-tagalog-modern.jpg" alt="Modern Barong Tagalog" style="max-height: 300px;"></span></p>
+                            <p class="text-center">Modern Barong Tagalog worn at a wedding</p>
+                            <br>
+                            <h3 class="fst-italic">1946 - Modern Day</h3>
+                            <br><br>
+                            <p class="lead text-justify">
+                                At his 1953 inauguration, President Ramón Magsaysay purposefully wore a barong tagalog.
+                                In the majority of official public and private events, he also donned barong tagalog.
+                                In the modern era, Magsaysay's adoption of the barong tagalog as formal clothing was unheard of.
+                                Other Philippine presidents followed his lead, and by the time of Diosdado Macapagal's administration in the 1960s, it had once again earned its place as formal attire.
+                                Particularly dictator Ferdinand Marcos wore barong tagalog to practically every event.
+                                In 1975, Marcos made a proclamation designating the barong tagalog and the baro't saya as the official national dress. Even though the barong tagalog was now considered formal clothing, in the post-war Philippines, grooms did not frequently wear it to weddings.
+                                In most marriages, the woman wore a terno and the groom a western suit.
+                                However, things had turned around by the 1990s.
+                                Nowadays, grooms nearly invariably wear barong tagalog, whereas brides preferred western-style wedding dresses. 
+                            </p>
+                            <hr>
+
+                            <br>
+                            <p class="lead text-justify">
+                                Further Reading:
+                                <br>
+                                <a class="text-black" href="http://www.seasite.niu.edu/tagalog/cynthia/costumes/barong_tagalog.htm">http://www.seasite.niu.edu/tagalog/cynthia/costumes/barong_tagalog.htm</a>      
+                            </p>
+                            <br>
+                        </div>
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End of Article 1-->
+
+        <!--Article 2-->
+        <div class="wrapper" id="bg-img-2">
+            <div class="container" style="padding: 20px; background-color: #5d403290;">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div id="baro-saya" class="bg-light p-5">
+                            <hr>
+                            <h2 class="display-4  text-center">
+                            Baro't Saya: The Traditional Filipina Dress
+                            </h2>
+                            <br>
+                            <p class="text-center"><span><img class="img-fluid" src="img/article-img/baro-saya.jpg" alt="Baro't Saya" style="max-height: 300px;"></span></p>
+                            <p class="text-center">A painting by Fabian de la Rosa named <em>Filipina</em> that depicts a working-class woman wearing a baro't saya.</p>
+                            <br>
+                            <h3 class="fst-italic">The Baro't Saya, the Blouse and Skirt of the Filipina</h3>
+                            <br><br>
+                            <p class="lead text-justify">
+                                The <b>Baro't Saya</b> is more than just a dress; it is an embodiment of the Filipina; it is as assured and eye-catching as it is elegant and sophisticated.
+                                It's understandable why it's updated constantly in the present because it's such a clear illustration of what a contemporary Filipina ought to want to be.      
+                            </p>
+
+                            <br>
+                            <p class="text-center"><span><img class="img-fluid" src="img/article-img/baro-saya-parts.jpg" alt="Parts of the Baro't Saya" style="max-height: 300px;"></span></p>
+                            <br>
+                            <h3 class="fst-italic">The Parts of the Baro't Saya</h3>
+                            <br><br>
+                            <p class="lead text-justify">
+                                There are four components in the baro't saya.
+                                A blouse made of lightweight material is called the Baro.
+                                A skirt known as the Saya can end somewhere at the feet or below the knee.
+                                A scarf called an alampay or panuelo is draped over the shoulders and frequently fastened with a brooch.
+                                A small overskirt called the Tapiz is worn over the Saya.
+                                Each part of the baro't saya underwent design evolution over the years as a result of significant historical events and decades.
+                                For instance, the Saya's design evolved to become increasingly complex as a result of the development of global trade and the increased availability of intricate fabrics.       
+                            </p>
+
+                            <br>
+                            <p class="text-center">
+                                <span>
+                                    <img class="img-fluid" src="img/article-img/corpino.jpg" alt="Corpiño" style="max-height: 300px;">
+                                    <img class="img-fluid" src="img/article-img/enaguas.jpg" alt="Enaguas" style="max-height: 300px;">
+                                </span>
+                            </p>
+                            <p class="text-center">The <em>corpiño</em> (left) and the <em>enaguas</em> (right)).</p>
+                            <br>
+                            <h3 class="fst-italic">Undergarments worn under the Baro't Saya</h3>
+                            <br><br>
+                            <p class="lead text-justify">
+                                The Baro't Saya can be worn over a particular set of undergarments because it is thin and somewhat transparent.
+                                The Corpiño and Enaguas are worn below the blouse and the skirt, respectively.
+                                They are delicately detailed undergarments that are light in color.
+                                It enables the use of an additional design layer behind the translucent material.        
+                            </p>
+
+                            <br>
+                            <p class="text-center"><span><img class="img-fluid" src="img/article-img/pineapple-fiber.jpeg" alt="Pineapple Fiber" style="max-height: 300px;"></span></p>
+                            <br>
+                            <h3 class="fst-italic">Baro't Saya materials</h3>
+                            <br><br>
+                            <p class="lead text-justify">
+                                The baro't saya is made of fiber because it is readily available, useful, and structurally sound.
+                                Pineapples are widely available since they grow well in tropical nations like the Philippines.
+                                The fabric is thin and breathable, making it ideal for wearing in hot weather.
+                                The material can also be firm and structured despite how lightweight it is, which allows for the creation of the famous baro't saya sleeves.
+                                Additionally, Pia Fiber is produced in an environmentally responsible manner—it is manually harvested and weaved on a loom.   
+                            </p>
+                            <hr>
+
+                            <br>
+                            <p class="lead text-justify">
+                                Further Reading:
+                                <br>
+                                <a class="text-black" href="https://philippinefolklifemuseum.org/">https://philippinefolklifemuseum.org/</a>      
+                            </p>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End of Article 2-->
+
+        <!--Article 3-->
+        <div class="wrapper" id="bg-img-3">
+            <div class="container" style="padding: 20px; background-color: #ea526f95;">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div id="wanes-and-lufid" class="bg-light p-5">
+                            <hr>
+                            <h2 class="display-4  text-center">
+                            Wanes and Lufid: A Remnant of the Past
+                            </h2>
+                            <br>
+                            <p class="text-center"><span><img class="img-fluid" src="img/article-img/wanes.jpg" alt="Wanes" style="max-height: 300px;"></span></p>
+                            <p class="text-center">Wanes, worn around the waist as a cover.</p>
+                            <br>
+                            <h3 class="fst-italic">The Wanes, clothing of the male Igorots</h3>
+                            <br><br>
+                            <p class="lead text-justify">
+                                The typical outfit for male Igorots or Kalingas is the "bag" (bahag), named <b>Wanes</b> in the Cordilleras.
+                                It is a long, woven fabric that is between 3 and 5 feet long and 10 to 15 inches broad.
+                                Its primary use is to conceal the man's privates.
+                                To keep the garment from slipping off and to make sure that it safely and effectively covers the male organs, it is tightly fastened at the waist.
+                                Traditionally, guys don't wear clothing on the upper body.Tattoos are common The number of tattoos a man has reveals his status in the community.
+                                It can also mean how many foes he's killed with his bolo or spear.
+                                Some Igorot or Kalinga attires have armbands and a headpiece covered in feathers.       
+                            </p>
+
+                            <br>
+                            <p class="text-center"><span><img class="img-fluid" src="img/article-img/lufid.jpg" alt="Lufid" style="max-height: 300px;"></span></p>
+                            <br>
+                            <h3 class="fst-italic">The Lufid, clothing of the female Igorots</h3>
+                            <br><br>
+                            <p class="lead text-justify">
+                                The outfit of the female Igorot is a long, wide rectangular piece of woven clothing that is between three and five feet long, called <b>Lufid</b>. It is simply fastened at the waist and worn like a skirt. Women's top apparel was nonexistent in earlier times, but since the modern era has affected the younger generation, earth-toned blouses are now used. In certain areas, married women still go topless along with the older generations. However, the younger generation has chosen to dress more modestly. The woman's upper torso is typically decorated with native beads, called "bongol" in the Kalinga language. The size and quantity of beads in the "bongol" represent the woman's status.      
+                            </p>
+                            <hr>
+
+                            <br>
+                            <p class="lead text-justify">
+                                Further Reading:
+                                <br>
+                                <a class="text-black" href="https://amerigorot.blogspot.com/2010/10/my-siwsiwan-fabric.html">https://amerigorot.blogspot.com/2010/10/my-siwsiwan-fabric.html</a>      
+                            </p>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End of Article 3-->
+
+        <!--Article 4-->
+        <div class="wrapper" id="bg-img-4">
+            <div class="container" style="padding: 20px; background-color: #5d403290;">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div id="maria-clara" class="bg-light p-5">
+                            <hr>
+                            <h2 class="display-4  text-center">
+                            Traje de Mestiza, Maria Clara, and the birth of Terno
+                            </h2>
+                            <br>
+                            <p class="text-center"><span><img class="img-fluid" src="img/article-img/traje-de-mestiza.jpg" alt="Traje de Mestiza" style="max-height: 300px;"></span></p>
+                            <br>
+                            <h3 class="fst-italic">The Traje de Mestiza</h3>
+                            <br><br>
+                            <p class="lead text-justify">
+                                In the early 1900s, the Philippines was acquired by the United States, in which the traditional styles were influence by Hollywood’s fashion trends. This led to the creation of Traje de Mestiza whereas its rough translation, traje as the Spanish term for dress, while mestiza is denoted a woman of mixed heritage. During the American colonial era, the Traje de Mestiza became a prominent style of Filipiñiana attire. This was in fact considered as a more refined version of Maria Clara with a shapelier and more modern silhouette that retains its detailed embroidery.       
+                            </p>
+
+                            <br>
+                            <p class="text-center"><span><img class="img-fluid" src="img/article-img/maria-clara.png" alt="Maria Clara Gown" style="max-height: 300px;"></span></p>
+                            <br>
+                            <h3 class="fst-italic">The Maria Clara Gown</h3>
+                            <br><br>
+                            <p class="lead text-justify">
+                                One of the elegant formal outfits for women is Maria Clara. It emerged popularity in 1890 during the Spanish era. The Maria Clara was considered a mestiza dress, which is an ensemble combining indigenous and Spanish influences. The origin of the clothing came from the traditional Baro’t Saya of early Filipinos. Its name was taken from the heroine of Noli Me Tangere – Maria Clara, as a symbol of the virtues and nobility of a Filipina woman. It also represented the ideal woman which is beautiful, conservative, and adherent to the prevailing Catholic values. Nowadays, the Maria Clara is used during folk dance and theatrical performances, and occasionally chosen as political or bridal attire. This modern version of the Maria Clara gown was unified by Philippine National Artist Ramon Valera, and is now called <em>terno</em>.      
+                            </p>
+                            <hr>
+
+                            <br>
+                            <p class="lead text-justify">
+                                Further Reading:
+                                <br>
+                                <a class="text-black" href="https://vintagallery.com/">https://vintagallery.com/</a>      
+                            </p>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End of Article 4-->
+
+        <!--Article 5-->
+        <div class="wrapper" id="bg-img-5">
+            <div class="container" style="padding: 20px; background-color: #ea526f95;">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div id="balintawak-dress" class="bg-light p-5">
+                            <hr>
+                            <h2 class="display-4  text-center">
+                            The Balintawak Dress: the Filipina Summer Dress
+                            </h2>
+                            <br>
+                            <p class="text-center"><span><img class="img-fluid" src="img/article-img/balintawak-dress.jpg" alt="Balintawak Dress" style="max-height: 300px;"></span></p>
+                            <p class="text-center">Three young girls enjoying the summer wearing the Balintawak.</p>
+                            <br>
+                            <h3 class="fst-italic">The Balintawak Dress</h3>
+                            <br><br>
+                            <p class="lead text-justify">
+                                The Balintawak dress is a traditional costume native to the Philippines. It was more common in Philippine’s countryside. It is believed to have originated in Antipolo, a city in Manila with one of the most popular tourist attractions in the Philippines. The Filipino women used to wear it in the ‘30s for picnics and outdoor activities This costume was to epitomize Filipina gaiety, light-heartedness and her costuming sense of rural roots. It was also supposed to give a summery feeling, hence the use of butterfly sleeves and skirts in its design. Despite the modern era coming and changing the fashion trends as we know them, the Filipino women still wear modernized Balintawak to match today’s fashion.       
+                            </p>
+                            <hr>
+
+                            <br>
+                            <p class="lead text-justify">
+                                Further Reading:
+                                <br>
+                                <a class="text-black" href="https://philippinefolklifemuseum.org/">https://philippinefolklifemuseum.org/</a>      
+                            </p>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End of Article 5-->
+
+        <!--Article 6-->
+        <div class="wrapper" id="bg-img-6">
+            <div class="container" style="padding: 20px; background-color: #5d403290;">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div id="kimona-and-patadyong" class="bg-light p-5">
+                            <hr>
+                            <h2 class="display-4  text-center">
+                            Kimona and Patadyong, Visayas' representative of Fashion
+                            </h2>
+                            <br>
+                            <p class="text-center"><span><img class="img-fluid" src="img/article-img/kimona.jpg" alt="Kimona" style="max-height: 300px;"></span></p>
+                            <p class="text-center">The Kimona worn over the shoulders.</p>
+                            <br>
+                            <h3 class="fst-italic">The Kimona</h3>
+                            <br><br>
+                            <p class="lead text-justify">
+                                In Visayas (particularly in Cebu and the Negros island), Kimona and Patadyong are used to represent the fashion in Visayas. Kimona is a blouse with a matching knee-length skirt. It is made of pineapple fiber and is usually transparent. The kimona was worn for everyday activities as casual dress or for formal occasion.        
+                            </p>
+
+                            <br>
+                            <p class="text-center"><span><img class="img-fluid" src="img/article-img/patadyong.jpg" alt="Patadyong" style="max-height: 300px;"></span></p>
+                            <p class="text-center">The Patadyong, worn as a skirt.</p>
+                            <br>
+                            <h3 class="fst-italic">The Patadyong</h3>
+                            <br><br>
+                            <p class="lead text-justify">
+                                The Kimona dress is then worn with Patadyong – a textile woven that is prominent in the provinces of Antique and Iloilo which is both in the island of Panay. Its name was derived from the words “pa” and “tadlong,” which is a Visayan translation of “to be left straight.” This hints for its silhoute as a skirt that is narrow and strait with no pleats. Its cloth represents its modest restraint, bearing with simplicity in pattern yet the loudness in color and function. It is woven through a wooden loom known as tiral that involves interlacing different colors of thread.      
+                            </p>
+                            <hr>
+
+                            <br>
+                            <p class="lead text-justify">
+                                Further Reading:
+                                <br>
+                                Coo, Stéphanie Marie R. (2014). Clothing and the colonial culture of appearances in nineteenth century Spanish Philippines (1820-1896) (PhD). Université Nice Sophia Antipolis.      
+                            </p>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End of Article 6-->
+
+        <!--Article 7-->
+        <div class="wrapper" id="bg-img-7">
+            <div class="container" style="padding: 20px; background-color: #ea526f95;">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div id="malong" class="bg-light p-5">
+                            <hr>
+                            <h2 class="display-4  text-center">
+                            The Malong: the most used Garment in Asia
+                            </h2>
+                            <br>
+                            <p class="text-center"><span><img class="img-fluid" src="img/article-img/malong.png" alt="Malong" style="max-height: 300px;"></span></p>
+                            <br>
+                            <h3 class="fst-italic">The Malong</h3>
+                            <br><br>
+                            <p class="lead text-justify">
+                                The Malong is produced by the weavers of Mindanao which is one of the most well-known and widely-used textiles. The malong is known for its versatility. It can be used as dresses, skirts, trousers, capes, blankets, etc. It is frequently worn covering the entire body by both men and women alike. A common way of wearing a malong is a wraparound skirt from high up the waist all the way down to the wearer’s feet. This kind of wearing the malong is called katinambed for women and katampi for men. The versatility, tradition and artistry of malong has been kept till the modern fashion thanks to both of the weavers and enthusiasts that continue to carry its rich legacy as one of the Philippines illustrious garments.       
+                            </p>
+                            <hr>
+
+                            <br>
+                            <p class="lead text-justify">
+                                Further Reading:
+                                <br>
+                                <a class="text-black" href="https://vintagallery.com/">https://vintagallery.com/</a>      
+                            </p>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End of Article 7-->
+
+        <!--Article 8-->
+        <div class="wrapper" id="bg-img-8">
+            <div class="container" style="padding: 20px; background-color: #5d403290;">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div id="hijab-and-taqiyah" class="bg-light p-5">
+                            <hr>
+                            <h2 class="display-4  text-center">
+                            The Hijab and Taqiyah, and the Islamic Culture in Mindanao
+                            </h2>
+                            <br>
+                            <p class="text-center"><span><img class="img-fluid" src="img/article-img/hijab.jpg" alt="Hijab" style="max-height: 300px;"></span></p>
+                            <p class="text-center">Hijab, worn as a veil.</p>
+                            <br>
+                            <h3 class="fst-italic">The Hijab, Muslim women's headwear</h3>
+                            <br><br>
+                            <p class="lead text-justify">
+                                The Islamic Culture in Mindanao was practiced and widespread. Hijab is worn by women which is a long-sleeved top and a floor-length skirt. The word “hijab” means cover, screen, or curtain. It also refers to a specific form of veil worn by some Muslim women and the modest Islamic style of dress in general. It is required to be worn by Muslim women hijab in front of any man they could theoretically marry but not necessary to be worn in front of other Muslim women.       
+                            </p>
+
+                            <br>
+                            <p class="text-center"><span><img class="img-fluid" src="img/article-img/taqiyah.jpg" alt="Taqiyah" style="max-height: 300px;"></span></p>
+                            <p class="text-center">Taqiyah, worn as a cap on the head.</p>
+                            <br>
+                            <h3 class="fst-italic">The Taqiyah, Muslim men's headwear</h3>
+                            <br><br>
+                            <p class="lead text-justify">
+                                For men, Taqiyah is worn which is a short, rounded skullcap. It is often worn for religious purposes because Muslims believe that the Islamic prophet Muhammad used to keep his head covered, therefore making it mustahabb (something that is commended). It comes with many colors and design but if worn with a keffiyeh – a type of headscarf, white color is used traditionally. Modern dresses still feature traditional elements, but the overall style today reflects how Muslims have generally dressed, which is loose and more receptive to Western influences.      
+                            </p>
+                            <hr>
+
+                            <br>
+                            <p class="lead text-justify">
+                                Further Reading:
+                                <br>
+                                <a class="text-black" href="https://philippinefolklifemuseum.org/">https://philippinefolklifemuseum.org/</a>      
+                            </p>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End of Article 8-->
+            <footer>
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12 p-3">
+                        <hr class="p-3 text-white">
+                        <p class="text-white p-3">2023 Philippine Historical Attires.</p>
+                    </div>
+                </div>
+
+            </footer>
+            
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/3.4.1/bootstrap.min.css">
+        <link href="./css/5.3.0/bootstrap.min.css" rel="stylesheet">
+        <script src="./js/5.3.0/bootstrap.bundle.min.js"></script>
+        <script src="./js/jquery-3.6.1.min.js"></script>
+        <script src="./js/3.4.1/bootstrap.min.js"></script>
+        <title>Designers</title>
+        <style>
+
+            body{
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                background-color:aliceblue;
+            }
+        
+            .jumbotron{
+                background-image: src("...");
+                background-size: cover;
+            }
+            
+            .navbar-brand{
+                font-family: Brush Script MT, cursive;
+                font-size: 35px;
+                letter-spacing: 3px;
+                font-weight: light;
+                
+            }
+        
+            .navbar-brand:hover, .navbar-brand:focus{
+                    
+                color: #edc79b !important;
+                background-color: transparent !important;
+                transition: 0.5s;
+            }
+            
+            .nav-link{
+
+                font-size: 15px;
+            }
+
+            .lead{
+                font-size: 1.5rem !important;
+                letter-spacing: 1px;
+            }
+
+            .wrapper{
+                margin-top: -20px;
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            #bg-img-1{
+                background-image: radial-gradient(transparent, black), url(./img/designer-img/francis-libiran/FL-profile.png);
+            }
+
+            #topButton {
+                display: none;
+                position: fixed;
+                bottom: 20px;
+                right: 30px;
+                z-index: 99;
+                font-size: 18px;
+                border: none;
+                outline: none;
+                background-color: red;
+                color: white;
+                cursor: pointer;
+                padding: 15px;
+                border-radius: 4px;
+                
+            }
+
+            #topButton:hover {
+                transition: .2s;
+                background-color: #e76b74;
+            }
+
+            
+
+        </style>
+    </head>
+    <body>
+
+       
+        <header>
+            <nav class="navbar navbar-inverse navbar-expand-sm static-top">
+                <div class="container-fluid justify-content-start m-2">
+
+                
+                    <div class="navbar-header">
+                        <a href="index.html" class="navbar-brand p-3">Philippine Historical Attires</a>
+                    </div>
+            
+                    <ul class="navbar-nav">
+                        <li> <a href="index.html" class="nav-link">Home</a>
+                        <li> <a href="overview.html" class="nav-link">Overview</a> </li>
+                        <li> <a href="articles.html" class="nav-link">Articles</a> </li>
+                        <li class="active"><a href="designers.html" class="nav-link">Designers</a></li>
+                        <li> <a href="gallery.html" class="nav-link">Gallery</a> </li>
+                        
+                        
+                    </ul>
+                
+                </div>
+            </nav>
+        </header>
+
+        <button id="topButton" onclick="topFunction()">Scroll back to top</button>
+
+        <script>
+
+            let scrollbutton = document.getElementById("topButton")
+
+            // When the user scrolls down 200px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollbutton.style.display = "block";
+            } else {
+                scrollbutton.style.display = "none";
+            }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            } 
+
+        </script>
+
+        <!--Article 1-->
+        <div class="wrapper" id="bg-img-1">
+            <div class="container" style="padding: 20px; background-color: #ea526f95;">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div id="fashion-designers" class="bg-light p-5">
+                            
+                            <h2 class="display-4  text-center">Fashion Designers of the Philippines that Promotes and Applies Traditional Clothings in Their Designs</h2>
+                            <br>
+
+                            <h3 class="fst-italic">Francis Libiran</h3>
+                            <br><br>
+                            <p class="text-center"><span><img class="img-fluid" src="img/designer-img/francis-libiran/FL-profile.png" alt="Francis Libiran" style="max-height: 300px;"></span></p> 
+                            <br>
+                            
+                            <p class="lead text-justify">
+                                A well-known fashion designer and architect. 
+                                His love of patterns, architecture, nature, and travel is evident in his works. 
+                                Art deco patterns and cut-outs, tailored laser-cut materials, intricate adornments, and custom embroidery are among his signature design approaches. 
+                                He has been in the fashion industry for 2 decades and is regarded as one of the high-end fashion designers in the Philippines who specializes in customized and ready-to-wear wedding gowns, evening gowns, dresses, as well as menswear, corporate wear, and accessories. 
+                                One of his famous works are the gowns of Nikki Reed - an American actress who was known for her portrayal of vampire Rosalie Hale in The Twilight Saga. 
+                                And his well-known Barong Tagalog uniforms that are made for the Filipino athletes for the 2019 Southeast Asian Games that was hosted by the Philippines and the 2022 South East Asian Games by Vietnam. 
+                                He is known for not solely thinking of income as he is a person who values his principles and roots.
+                            </p>
+                            
+                            <br>
+                            
+                            <p class="text-center"><span><img class="img-fluid" src="img/designer-img/francis-libiran/FL-works.jpg" alt="Nikki Reed" style="max-height: 300px;"></span></p>
+                            <p class="text-center">Nikki Reed wearing the gown made by Francis Libiran</p>
+                            <br>
+
+                            <p class="text-center"><span><img class="img-fluid" src="img/designer-img/francis-libiran/FL-works2019.jpeg" alt="2019 SEA Games Uniform" style="max-height: 300px;"></span></p>
+                            <p class="text-center">The 2019 SEA Games Barong Tagalog uniform with the sun rays of the Philippine flag.</p>
+                            <br>
+
+                            <p class="text-center"><span><img class="img-fluid" src="img/designer-img/francis-libiran/FL-works-2022.jpg" alt="2022 SEA Games Uniform Agila" style="max-height: 300px;"></span></p>
+                            <p class="text-center">The 2022 SEA Games Barong Tagalog uniform with an eagle embroidery. </p>
+                            <br><br>
+                            
+                            <p class="lead text-justify">
+                                <b>You can checkout other products and collections of Francis libiran at </b>
+                                <br>
+                                <a class="text-black" href="https://francislibiran.com/">francislibiran.com</a>
+                            </p>
+                            <br><br>
+
+                            <h3 class="fst-italic">Edgar San Diego</h3>
+                            <br><br>
+                            <p class="text-center"><span><img class="img-fluid" src="/img/designer-img/edgar-san-diego/ESG-profile.jpg" alt="Francis Libiran" style="max-height: 300px;"></span></p>
+                            <br>
+                            <p class="lead text-justify">
+                                When he was young, he joined The Fashion Designers' Association of the Philippines (FDAP) to develop the country's fashion industry which made him the prestigious design assembly's youngest pioneer. 
+                                He eventually became an FDAP officer, who served as project chairman in most of the group's multiple major projects after working tirelessly to improve his craft. 
+                                He ultimately rose through the ranks into becoming the FDAP president, a post he kept for eight years. 
+                                He is also an accomplished painter in which he held his first solo exhibition named <b>“Baro't Saya Tuwa at Ligaya”</b> - a homage to his Filipino culture.
+                            </p>
+                            <br>
+
+                            <p class="text-center"><span><img class="img-fluid" src="img/designer-img/edgar-san-diego/ESG-works.jpg" alt="Edgar San Diego with his painting and daughter" style="max-height: 300px;"></span></p>
+                            <p class="text-center">Edgar San Diego helding his exhibition of “Baro't Saya Tuwa at Ligaya”</p>
+                            <br><br>
+
+                            <p class="lead text-justify">
+                                <b>You can checkout Edgar San Diego at </b>
+                                <br>
+                                <a class="text-black" href="https://www.facebook.com/edgarsandiegofashionandarts/">www.facebook.com/edgarsandiegofashionandarts</a>
+                            </p>
+                            <br><br>
+                            
+                            <h3 class="fst-italic">Mimi Parrel-Pimentel</h3>
+                            <br><br>
+                            <p class="text-center"><span><img class="img-fluid" src="img/designer-img/mimi-parrel-pimentel/MPP-profile.jpg" alt="Mimi Parrel-Pimentel" style="max-height: 300px;"></span></p>
+                            <br>
+
+                            <p class="lead text-justify">
+                                Is an awardee of the Ramon Magsaysay Foundation in 2000; she was considered as the Best Female Entrepreneur in Region X. 
+                                In 2016, she was appointed to become the fashion consultant of former President Rodrigo Roa Duterte. 
+                                In 2017, the designer was given the opportunity to create the barongs of the ASEAN ministers, and even the outfits of their spouses. 
+                                She also curated the outfits of the cabinet members and other executives.
+                                In the same year, Mimi Parrel-Pimentel also created the Filipiniana gowns of the candidates of Miss Universe. 
+                                She was also given the chance to join the Singapore Fashion Week, and the House of Ikons fashion show in London.
+                            </p>
+                            <br>
+
+                            <p class="text-center"><span><img class="img-fluid" src="img/designer-img/mimi-parrel-pimentel/MPP-withpresident.png" alt="Mimi Parrel-Pimentel with the President" style="max-height: 300px;"></span></p>
+                            <p class="text-center">Mimi Parrel-Pimentel with President Rodrigo Duterte</p>
+                            <br>
+                            
+                            <p class="text-center">
+                                <span>
+                                    <img class="img-fluid" src="img/designer-img/mimi-parrel-pimentel/MPP-works1.jpg" alt="Modern Barong Tagalog" style="max-height: 300px;">
+                                    <img class="img-fluid" src="img/designer-img/mimi-parrel-pimentel/MPP-works2.jpg" alt="Mimi Parrel-Pimentel with the President" style="max-height: 300px;">
+                                </span>
+                            </p>
+                            <p class="text-center">Mimi Parrel-Pimentel 20-Piece barong with T'nalak embroidery and Mindanao silk</p>
+                            <br><br>
+
+                            <p class="lead text-justify">
+                                <b>You can checkout Mimi Parrel-Pimentel at </b>
+                                <br>
+                                <a class="text-black" href="https://www.instagram.com/mimiparrelpimentel/?hl=en">www.instagram.com/mimiparrelpimentel</a>
+                            </p>
+                            <br><br>
+
+                            <h3 class="fst-italic">Veronica Mae “V” Baguio</h3>
+                            <br><br>
+                            <p class="text-center"><span><img class="img-fluid" src="img/designer-img/veronica-mae-baguio/VMB-profile.jpg" alt="Veronica Mae Baguio" style="max-height: 300px;"></span></p>
+                            <br>
+
+                            <p class="lead text-justify">
+                                She is a fashion designer of Balik-Batik social enterprises and clothing brand that fuses intricate traditional Filipino artistry with modern wearable designs. 
+                                They use the handwoven fabrics sourced from local, often indigenous, artisan weavers. 
+                                Some of the created clothing are embroidered by the T'boli of South Cotabato or Panay-Bukidnon women of Iloilo. 
+                                She aims to promote traditional weaving, make it more well-known among the younger generation, and make them wearable in any occasions. 
+                                Balik Batik sources weaves all over the country, specifically <b>binakul</b> from Abra and <b>langkit</b> from Maranao. The actual clothes are then made in Cebu.  
+                            </p>
+
+                            <br>
+                            <p class="text-center"><span><img class="img-fluid" src="img/designer-img/veronica-mae-baguio/VMB-works1.jpg" alt="Veronica Mae Baguio" style="max-height: 300px;"></span></p>
+                            <p class="text-center">Custom made Balik Batik Coat Barong</p>
+                            <br>
+
+                            <br>
+                            <p class="text-center"><span><img class="img-fluid" src="img/designer-img/veronica-mae-baguio/VMB-works2.jpg" alt="Custom Made Barong" style="max-height: 300px;"></span></p>
+                            <p class="text-center">Custom made Barong featuring Inaul - the traditional handwoven cloth of Maguindanaon.</p>
+                            <br>
+
+                            <br>
+                            <p class="text-center"><span><img class="img-fluid" src="img/designer-img/veronica-mae-baguio/VMB-works3.jpg" alt="Bespoke Balik Batik Barong" style="max-height: 300px;"></span></p>
+                            <p class="text-center">Bespoke Balik Batik Barong and matching sablay featuring Inaul, handwoven in Cotabato.</p>                                <br>
+
+                            <p class="lead text-justify">
+                                <b>You can checkout Balik-Batik products at </b>
+                                <br>
+                                <a class="text-black" href="https://www.facebook.com/balikbatik/">www.facebook.com/balikbatik</a>
+                            </p>
+                            <br><br>
+
+                            <h3 class="fst-italic">Caroline Mangosing</h3>
+                            <br><br>
+                            <p class="text-center"><span><img class="img-fluid" src="img/designer-img/caroline-mangosing/CM-profile.jpeg" alt="Veronica Mae Baguio" style="max-height: 300px;"></span></p>
+                            <br>
+
+                            <p class="lead text-justify">
+                                Founder of Vintage Gallery. 
+                                VINTA Gallery is bespoke and ready-to-wear modern Filipiniana and Filipino-inspired fashion and accessories. 
+                                Their popular designs were pan-Cordilleran or Ifugao pieces. 
+                                Some of their works are Ifugao <b>Bahag</b> Dress, which is made from handloomed traditional Ifugao stripe textile that is inspired by the bahag of the Cordillera region. 
+                                Her vision is to remove the idea of wearing cultural clothings as "costumes" and create acreate a fashionable Filipiniana clothing line that anybody can wear in any event or occasions.                                    The Ifugao weaves are made by Ifugao people in which the Vinta Gallery buy their weaves directly through the region in order to support them.  
+                           </p>
+    
+                            <br>
+                            <p class="text-center"><span><img class="img-fluid" src="img/designer-img/caroline-mangosing/CM-works1.jpg" alt="Handloomed Ifugao Bahag Dress" style="max-height: 300px;"></span></p>
+                            <p class="text-center">Red Handloomed Ifugao Bahag Dress</p>
+                            <br>
+
+                            <p class="text-center"><span><img class="img-fluid" src="img/designer-img/caroline-mangosing/CM-works2.jpg" alt="Handloomed Ifugao Track Suit" style="max-height: 300px;"></span></p>
+                            <p class="text-center">Handloomed Ifugao Track Suit</p>
+                            <br><br>
+
+                            <p class="lead text-justify">
+                                <b>You can checkout Vintage Gallery products and collections at </b>
+                                <br>
+                                <a class="text-black" href="https://vintagallery.com/">vintagallery.com</a>
+                            </p>
+                            <br><br>
+
+                            <h3 class="fst-italic">Percy J. "PJ" Arañador</h3>
+                            <br><br>
+                            <p class="text-center"><span><img class="img-fluid" src="img/designer-img/percy-aranador/PJA-profile.jpg" alt="Percy J. PJ Arañador" style="max-height: 300px;"></span></p>
+                            <br>
+
+                            <p class="lead text-justify">
+                                He is an First International Lifestyle Designer also known as <b>“PJ”</b> has established himself as an exceptionally talented designer. 
+                                Percy Arañador is also a design-led product and merchandise development expert, trends tracker-blogger, and branding consultant focusing on image building.
+                                He draws inspiration from the East and the West; the traditional and the ultra-modern. 
+                                He showcased one of his accessory designs highlighting the local fabric which is the <b>Patadyong</b>. 
+                                The Patadyong is hand-woven by the women of Salngan Livelihood Multi-Purpose Cooperative which is a cooperative known for producing Hablon - a handloom weaved cloth. 
+                            </p>
+    
+                            <br>
+                            <p class="text-center">
+                                <span>
+                                    <img class="img-fluid" src="img/designer-img/percy-aranador/PJA-works1.jpg" alt="Patadyong Inspired Clothings" style="max-height: 300px;">
+                                    <img class="img-fluid" src="img/designer-img/percy-aranador/PJA-works2.jpg" alt="Patadyong Inspired Clothings" style="max-height: 300px;">
+                                </span>
+                            </p>
+                            <p class="text-center">Patadyong Inspired Clothings from Herencia Modern Patadyong Fashion Show (2012).</p>
+                            <br><br>
+
+                            <p class="lead text-justify">
+                                <b>You can checkout Percy J Arañador products and collections at </b>
+                                <br>
+                                <a class="text-black" href="https://www.instagram.com/pj_aranador/?hl=en">www.instagram.com/pj_aranador</a>
+                            </p>
+                            <br><br>
+
+                            <h3 class="fst-italic">Lydia Querian</h3>
+                            <br><br>
+                            <p class="text-center"><span><img class="img-fluid" src="img/designer-img/lydia-querian/LQ-profile.jpg" alt="Lydia Querian" style="max-height: 300px;"></span></p>
+                            <br>
+
+                            <p class="lead text-justify">
+                                Founder and Chief Creative Officer of Daily Malong that aims to build awareness of “uncommon" Filipino textiles in a more prominent platform like New York Fashion Week. 
+                                The Daily Malong is a ecommerce store promoting the application of indigenous handwoven textiles on modern wearables offering handwoven products. 
+                                The products are sourced from different indigenous communities in the Philippines through different apparels, accessories and home goods.
+                                They strive to empower Indigenous Filipino artisans to continue their living traditions by extending appreciation in the diaspora. 
+                                She stated that the indigenous textile worn will help the wearers and weavers to navigate societal atrocities, prevent climate change, and restore a more sustainable environment.        
+                            </p>
+    
+                            <br>
+                            <p class="text-center">
+                                <span>
+                                    <img class="img-fluid" src="img/designer-img/lydia-querian/LQ-works1.jpg" alt="Malong Inspired Clothings" style="max-height: 300px;">
+                                    <img class="img-fluid" src="img/designer-img/lydia-querian/LQ-works2.jpg" alt="Malong Inspired Clothings" style="max-height: 300px;">
+                                </span>
+                            </p>
+                            <p class="text-center">Malong Inspired Clothings in Daily Malong's Runway at Edison Hotel (2021).</p>
+                            <br><br>
+
+                            <p class="lead text-justify">
+                                <b>You can checkout Daily Malong's weavers and shop at </b>
+                                <br>
+                                <a class="text-black" href="https://www.dailymalong.com/">www.dailymalong.com</a>
+                            </p>
+                            <br><br>
+
+                            <hr>
+                            <br>
+                            <p class="lead text-justify">
+                                Check Other Ingenious Fashion Designers:
+                                <br>
+                                <a class="text-black" href="https://www.tatlerasia.com/style/fashion/modernizing-the-barong-tagalog">https://www.tatlerasia.com/style/fashion/modernizing-the-barong-tagalog</a>   
+                                <a class="text-black" href="https://www.lofficielph.com/fashion/these-filipino-designers-terno-balintawak-creations-championed-the-third-ternocon">https://www.lofficielph.com/fashion/these-filipino-designers-terno-balintawak-creations-championed-the-third-ternocon</a>   
+                            </p>
+                            <br>
+                        </div>
+                            
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12 p-3">
+                        <hr class="p-3 text-white">
+                        <p class="text-white p-3">2023 Philippine Historical Attires.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

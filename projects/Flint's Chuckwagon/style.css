@@ -1,0 +1,1071 @@
+body{
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(#295ddf, #d5e0e9);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+#start{
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    z-index: 1000;
+}
+
+#game{
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameBoard{
+    display: flex;
+    position: absolute;
+    min-height: 540px;
+    min-width: 960px;
+    max-height: 540px;
+    max-width: 960px;
+    border: 4px solid #ffffff;
+    overflow: hidden;
+}
+
+#mainMenu{
+    width: 960px;
+    height: 540px;
+    z-index: 0;
+    background-image: url(assets/bg/title_screen.jpg);
+    background-size: cover;
+}
+
+#blackOverlay{
+    position: absolute;
+    background-color: #000000;
+    height: 540px;
+    width: 960px;
+    z-index: 1000;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.background img{
+    width: 960px;
+    height: 540px;
+    z-index: 0;
+    pointer-events: none;
+}
+input[type=button]{
+    background: none;
+    background-image: url(assets/button/button_bg.png);
+    border: none;
+    text-decoration: none;
+    background-size: cover;
+    cursor: pointer;
+    font-size: large;
+    font-family: 'luminari';
+    color: #daa520;
+    height: 50px;
+}
+
+input[type=button]:hover{
+    filter:hue-rotate(100deg);
+    border: 3px solid#003100;
+}
+
+
+
+/*game over screen default flex*/
+
+#gameOver{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 540px;
+    width: 960px;
+    z-index: 975;
+    background-image: radial-gradient(#a91212, #ffffff);
+}
+
+#gameOver h1{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: absolute;
+    top: 150px;
+}
+
+#gameOver input[type=button]{
+    margin: 10px;
+}
+
+/*end of game over screen*/
+
+
+/*next day screen*/
+#nextDay{
+    background-image: radial-gradient(#1ab73c, #ffffff);
+    display: none;
+    padding: 20px;
+    height: 540px;
+    width: 960px;
+    font-family: 'Courier New', Courier, monospace;
+}
+/*end of next day screen*/
+
+/*orders*/
+table{
+    pointer-events: none;
+}
+
+tr{
+    pointer-events: none;
+}
+
+td{
+    pointer-events: none;
+}
+
+
+.current_order{
+    display: none;
+    position: absolute;
+    left: 200px;
+    height: 225px;
+    width: 150px;
+    background-image: url(assets/obj/sheet/small_sheet1.png);
+    background-size: 98%;
+    background-repeat: no-repeat;
+    cursor: move;
+}
+
+.current_order td{
+    position: relative;
+    top: 20px;
+    left: 15px;
+    padding-top: 12px;
+    padding-right: 10px;
+    text-align: center;
+    pointer-events: none;
+}
+
+.current_order_icon{
+    overflow: hidden;
+    max-width: 50px;
+    height: 30px;
+    max-height: 30px;
+    pointer-events: none;
+}
+
+.current_order_icon_handler{
+    position: absolute;
+    top: 0px;
+    width: 50px;
+    pointer-events: none;
+}
+.current_order_icon p{
+    position: absolute;
+    top: 0px;
+    left:40px;
+    width: 50px;
+    pointer-events: none;
+}
+
+.order2{
+    display: none;
+    filter: brightness(0.6);
+    position: absolute;
+    height: 150px;
+    width: 100px;
+    background-image: url(assets/obj/sheet/small_sheet2.png);
+    background-size: 98%;
+    background-repeat: no-repeat;
+    left: 100px;
+    pointer-events: none;
+}
+
+.order2 td{
+    position: relative;
+    top: 20px;
+    left: 15px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.small_order_icon{
+    overflow: hidden;
+    max-width: 20px;
+    height: 20px;
+    max-height: 20px;
+}
+
+.order2_icon_handler{
+    position: absolute;
+    top: 0px;
+    width: 20px;
+}
+
+.order3_icon_handler{
+    position: absolute;
+    top: 0px;
+    width: 20px;
+}
+
+.small_order_icon p{
+    position: absolute;
+    top: 0px;
+    left: 25px;
+    width: 20px;
+}
+
+
+.order3{
+    display: none;
+    filter: brightness(0.5);
+    position: absolute;
+    height: 150px;
+    width: 100px;
+    background-image: url(assets/obj/sheet/small_sheet3.png);
+    background-size: 98%;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+.order3 td{
+    position: relative;
+    top: 20px;
+    left: 15px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+
+
+/*END OF ORDERS*/
+
+/*MAIN MENU*/
+
+
+/*STATIONS*/
+#cookingStation,
+#orderStation,
+#prepStation,
+#receivingStation{
+    display: none;
+}
+
+/*prep station*/
+.sauce{
+    position: absolute;
+    width: 108px;
+    height: 108px;
+    z-index: 1;
+    cursor: move;
+}
+
+.sauce img{
+    position: absolute;
+    height: 120px;
+    pointer-events: none;
+}
+
+#bbq_sauce{
+    width: 98px;
+    height: 98px;
+    bottom: 100px;
+    right: 450px;
+}
+
+#hot_sauce{
+    bottom: 0px;
+    right: 490px;
+}
+
+#hot_sauce img{
+    top: -30px;
+    left: -20px;
+    height: 150px;
+}
+
+#ranch_dressing{
+    width: 98px;
+    height: 98px;
+    bottom: 100px;
+    right: 60px;
+}
+
+#ranch_dressing img{
+    height: 100px;
+}
+
+#butter_sauce{
+    bottom: 0px;
+    right: 25px;
+}
+
+#butter_sauce img{
+    height: 125px;
+}
+
+.trash{
+    position: absolute;
+    top: 0px;
+}
+
+#prep_station_trash{
+    height: 320px;
+    width: 400px;
+}
+
+#plate{
+    position: absolute;
+    height: 150px;
+    width: 250px;
+    z-index: 1;
+}
+
+#plate-img{
+    position: absolute;
+    height: 150px;
+    bottom: 0px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.plate_handler{
+    position: absolute;
+    height: 300px;
+    top: -125px;
+    left: -15px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+#assembled{
+    position: absolute;
+    display: flex;
+    bottom: 0px;
+    left: 500px;
+    height: 175px;
+    width: 300px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 9;
+}
+
+#meatTray{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 220px;
+    width: 300px;
+    overflow: hidden;
+}
+
+#meatTray img{
+    position: absolute;
+    top: -10px;
+    left: -180px;
+    height: 300px;
+    pointer-events: none;
+}
+
+.meat{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    display: none;
+}
+
+.meat img{
+    position: absolute;
+    height: 175px;
+    top: -55px;
+    left: -35px;
+}
+
+.prep_meat_handler{
+    pointer-events: none;
+}
+
+.cooked_meat{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    display: none;
+}
+
+.cooked_meat img{
+    position: absolute;
+    height: 150px;
+    top: -45px;
+    left: -35px;
+}
+
+.cooked_meat_handler{
+    pointer-events: none;
+}
+
+#brisket{
+    bottom: 0px;
+    left: 20px;
+}
+
+#sausage{
+    bottom: 30px;
+    left: 160px;
+}
+
+#ribs{
+    bottom: 100px;
+    left: 60px;
+}
+
+.order_list{
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+}
+
+.shelf{
+    position: absolute;
+    height: 350px;
+    width: 560px;
+    top: 0px;
+    left: 400px;
+}
+
+.drinks{
+    position: absolute;
+    top: 200px;
+    height: 125px;
+    width: 50px;
+    cursor: move;
+}
+
+.drinks img{
+    position: absolute;
+    height: 175px;
+    pointer-events: none;
+}
+
+#whiskey{
+    left: 40px;
+}
+
+#whiskey img{
+    top: -35px;
+    left: -45px;
+}
+
+#beer{
+    left: 120px;
+}
+
+#beer img{
+    top: -40px;
+    left: -45px;
+}
+
+#wine{
+    left: 200px;
+}
+
+#wine img{
+    top: -45px;
+    left: -45px;
+}
+
+.sides{
+    position: absolute;
+    height: 75px;
+    width:75px;
+    top: 30px;
+    cursor: move;
+}
+
+.sides img{
+    position: absolute;
+    height: 100px;
+    left: -20px;
+    pointer-events: none;
+}
+
+#potato_salad{
+    left: 240px;
+}
+
+#beans{
+    top: 20px;
+    left: 340px;
+}
+
+#guacamole{
+    left: 440px;
+}
+
+.assembled_drink{
+    position: absolute;
+    height: 150px;
+    width: 75px;
+}
+
+.drink_handler{
+    position: absolute;
+    max-height: 175px;
+    top: -20px;
+    left: -33px;
+    pointer-events: none;
+}
+
+#drink1{
+    top: -100px;
+    left: 0px;
+}
+
+#drink2{
+    top: -100px;
+    right: 0px;
+}
+
+.assembled_sauce{
+    position: absolute;
+    height: 75px;
+    width: 75px;
+    z-index: 1;
+}
+
+.sauce_handler{
+    position: absolute;
+    height: 110px;
+    left: -20px;
+    top: -25px;
+    pointer-events: none;
+}
+
+#sauce1{
+    bottom: 40px;
+    left: -50px;
+}
+
+#sauce2{
+    bottom: 40px;
+    right: -50px;
+}
+
+.assembled_sides{
+    position: absolute;
+    height: 75px;
+    width: 75px;
+    top: -50px;
+}
+
+.sides_handler{
+    position: absolute;
+    top: -12px;
+    left: -10px;
+    height: 100px;
+    pointer-events: none;
+}
+/*END OF PREP STATION*/
+
+/*cooking station*/
+#cooking_station_trash{
+    height: 290px;
+    width: 635px;
+}
+
+.progress_bar{
+    position: absolute;
+    width: 120px;
+    height: 20px;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+    display: none;
+}   
+
+.red{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+}
+
+.green{
+    width: 23.5%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 70.5%;
+    background-color: rgb(38, 253, 38);
+}
+
+.gray{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    z-index: 1;
+}
+
+.grill_target{
+    position: absolute;
+    width: 150px;
+    height: 125px;
+    z-index: 1;
+}
+
+.grill_target img{
+    position: absolute;
+    top: -50px;
+    left: -30px;
+    height: 200px;
+}
+
+.grill_handler{
+    pointer-events: none;
+}
+
+#grill_target1{
+    top: 0px;
+    left: 150px;
+}
+
+#grill_target2{
+    top: 0px;
+    left: 400px;
+}
+
+#grill_target3{
+    top:   125px;
+    left: 150px;
+}
+
+#grill_target4{
+    top:   125px;
+    left: 400px;
+}
+
+.highlight{
+    background-color: #ff000025;
+    border-radius: 5px;
+}
+
+.trash_highlight{
+    background-color: #ff000075;
+    border-radius: 5px;
+}
+
+#grill{
+    position: absolute;
+    height: 250px;
+    width: 685px;
+    bottom: 0px;
+    left: 75px;
+}
+
+
+.raw_meat{
+    position: absolute;
+    height: 75px;
+    width: 150px;
+    cursor: move;
+}
+
+.raw_meat img{
+    position: absolute;
+    height: 150px;
+    pointer-events: none;
+}
+
+#meat_tray{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    height: 250px;
+    width: 200px;
+    
+}
+
+#raw_brisket{
+    bottom: 90px;
+    right: 25px;
+    z-index: 1;
+}
+
+#raw_brisket img{
+    height: 180px;
+    top: -90px;
+    left: -30px;
+}
+
+#raw_sausage{
+    bottom: 175px;
+    right: 50px;
+    z-index: 1;
+}
+
+#raw_sausage img{
+    top: -60px;
+}
+
+#raw_ribs{
+    bottom: 0px;
+    right: 10px;
+    z-index: 1;
+}
+
+#raw_ribs img{
+    height: 185px;
+    top: -100px;
+    left: -25px;
+}
+
+#cookedMeat{
+    position: absolute;
+    height: 290px;
+    width: 325px;
+    top: 0px;
+    right: 0px;
+    overflow: hidden;
+}
+
+#cookedMeat img{
+    position: absolute;
+    height: 290px;
+}
+
+#grill_img{
+    pointer-events: none;
+}
+
+
+#cooked_brisket{
+    top: 135px;
+    right: 40px;
+}
+
+#cooked_sausage{
+    top: 70px;
+    right: 150px;
+}
+
+#cooked_ribs{                                                       
+    top: 30px;
+    right: 20px;
+}
+/*END OF COOKING STATION*/
+
+/*ORDER STATION*/
+#customer{
+    position: absolute;
+    top: 0px;
+    height: 540px;
+    width: 960px;
+}
+
+#customer_handler{
+    height: 540px;
+}
+
+.customer_order{
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    height: 300px;
+    width: 300px; 
+    /*BACKGROUND IMAGE*/
+
+}
+
+#take_order_button{
+    display: none;
+}
+
+.table{
+    position: absolute;
+    bottom: 0px;
+    height: 250px;
+    width: 960px;
+    background-size: cover;
+    background-position-y: bottom;
+    background-image: url(assets/obj/table.png);
+}
+
+#order_sheet{
+    /*display flex*/
+    display: none;
+    align-items: center;
+    position: absolute;
+    right: 100px;
+    top: 0px;
+    height: 300px;
+    width: 250px;
+    background-image: url(assets/obj/sheet/big_sheet.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#order_items table{
+    position: absolute;
+    left: 30px;
+}
+
+
+#order_sheet table{
+    position: absolute;
+    left: 30px;
+}
+
+.order_icon_handler{
+    height: 75px; 
+}
+
+.order_icon p{
+    margin-left: 30px;
+}
+
+/*END OF ORDER STATION*/
+
+/*RECEIVING STATION*/
+
+
+#customer_receiving{
+    position: absolute;
+    top: 0px;
+    height: 540px;
+    width: 960px;
+}
+
+#customer_handler_receiving{
+    height: 540px;
+}
+
+#assembled_receiving{
+    position: absolute;
+    display: flex;
+    bottom: 0px;
+    left: 250px;
+    height: 175px;
+    width: 300px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 9;
+}
+
+#plate-img-receiving{
+    position: absolute;
+    height: 150px;
+    bottom: 0px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+#drink1_receiving{
+    top: -20px;
+    left: -200px;
+}
+
+#drink2_receiving{
+    top: -25px;
+    left: -100px;
+}
+
+#sauce1_receiving{
+    top: -1px;
+    right: -65px;
+}
+
+#sauce2_receiving{
+    top: 70px;
+    right: -150px;
+}
+
+#side_receiving{
+    right: -150px;
+    top: -5px;
+    
+}
+
+
+/*END OF RECEIVING STATION*/
+
+.display_button{
+    position: absolute;
+    bottom: 50px;
+    z-index: 999;
+}
+
+#toolbar{
+    position: absolute;
+    display: none;
+    top: 13vh;
+    right: 20vw;
+    z-index: 998;
+    background-color:#ffc109;
+    border-radius: 2px;
+    height: fit-content;
+    padding: 5px;
+}
+
+#xIcon{
+    background-image: url(assets/button/close.png);
+    background-size: cover;
+    height: 25px;
+    width: 25px;
+    margin-bottom: 25px;
+}
+
+#optionIcon{
+    background-image: url(assets/button/option.png);
+    background-size: cover;
+    height: 25px;
+    width: 25px;
+}
+
+
+#display_prep_station_button{
+    display: none;
+}
+
+#display_order_station_button{
+    display: none;
+}
+
+#display_cooking_station_button{
+    display: none;
+}
+
+/*DAY AND CASH COUNTERS*/
+#topBar{
+    display: flex;
+    justify-content: center; 
+}
+
+#notification_bar{
+    display: none;
+    position: absolute;
+    z-index: 100;
+    top: 100px;
+    left: 25px;
+    pointer-events: none;
+}
+
+.notification img{
+    height: 75px;
+}
+
+#bell{
+    visibility: hidden;
+}
+
+#alert{
+    visibility: hidden;
+}
+
+#counters{
+    display: none;
+}
+
+#day{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 150px;
+    height: 75px;
+    background-image: url(assets/button/button_bg.png);
+    background-size: cover;
+    top: 20px;
+    left: 150px;
+}
+
+#cash{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 150px;
+    height: 75px;
+    background-image: url(assets/button/button_bg.png);
+    background-size: cover;
+    top: 20px;
+    right: 150px;
+}
+
+#receiving_queue_counter{
+    display: flex;
+    text-align: right;
+    position: absolute;
+    width: 150px;
+    height: 125px;
+    background-image: url(assets/button/button_bg.png);
+    background-size: cover;
+    top: 125px;
+    right: 150px;
+    padding: 5px;
+}
+
+#note_box{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    height: 75px;
+    width: 600px;
+    top: 20px;
+    left: 475px;
+    right: 0;
+    background-color:#f0f8ff;
+    border: 3px solid #000000;
+}
+
+#day h2{
+    color: #ffd700; 
+}
+
+#receiving_queue_counter h2{
+    color: #24b9f4; 
+    -webkit-text-stroke-color: #000000;
+    -webkit-text-stroke-width: 0.2px;
+}
+
+#cash h2{
+    color: #35f335;
+    -webkit-text-stroke-color: #000000;
+    -webkit-text-stroke-width: 0.2px;
+}
+
+#next_day_button{
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+}
+
+#next_day_button input[type=button]{
+    margin: 10px;
+}
+
+#optionIcon:hover{
+    cursor: pointer;
+    filter:hue-rotate(100deg);
+}
+
+#xIcon:hover{
+    cursor: pointer;
+    filter:hue-rotate(100deg);
+}
+
+
+
+

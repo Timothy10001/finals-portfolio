@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="MainMenu.css">
+        <title>Flint's Chuckwagon</title>
+    </head>
+    <body>
+        <audio src="" id="music"></audio>
+        <audio src="" id="sfx"></audio>
+        <audio src="" id="sfx2"></audio>
+        <audio src="" id="sfx_alert"></audio>
+        <audio src="assets/music/pausebgm.ogg" id="pauseMusic"></audio>
+
+        <div id="start">
+            <input type="button" id="play_game" onclick="playGame()" value="Play Game">
+        </div>
+        <div id="game">
+            
+            <div id="blackOverlay" class="transition"></div>
+            <div id="topBar">
+                <div id="counters">
+                    <div id="day">
+                        <h2 class="day_counter"></h2>
+                    </div>
+                    <div id="note_box">
+                        <h2 class="note"></h2>
+                    </div>
+                    <div id="cash">
+                        <h2 class="cash_counter"></h2>
+                    </div>
+                    <div id="receiving_queue_counter">
+                        <h2 class="receiving_counter"></h2>
+                    </div>
+                </div>
+                
+                <div id="toolbar">
+                    <div id="xIcon" onclick="goToMainMenu()"></div>
+                    <div id="optionIcon" onclick="displayOption()"></div>
+                </div>
+            </div>
+
+            
+            <div id="gameBoard">
+                <div id="notification_bar">
+                    <div class="notification" id="bell">
+                        <img src="assets/icons/bell.png">
+                    </div>
+                    <div class="notification" id="alert">
+                        <img src="assets/icons/alert.png">
+                    </div>
+                </div>
+                
+                <div id="gameOver" class="screen">
+                    <h1>Game Over!</h1>
+                    <input type="button" id="try_again" value="Try Again?" onclick="tryAgain()">
+                    <input type="button" class="exit_game" value="Exit Game" onclick="exitGame()">
+                </div>
+
+                <div id="nextDay" class="screen">
+                    <span>
+                        <h1 class="day_counter"></h1>
+                    </span>
+                    <br>
+                    <span>
+                        <h2 class="rating"></h2>
+                    </span>
+                    <span>
+                        <h2 class="cash_counter"></h2>
+                    </span>
+                    <span id="next_day_button">
+                        <input type="button" id="next_day" value="Next Day" onclick="goToNextDay()">
+                        <input type="button" class="exit_game" value="Exit Game" onclick="goToMainMenu()">
+                    </span>
+                    
+                </div>
+
+                <div id="mainMenu" class="screen">
+                    
+                    <input id="startBttn" class="mainMenubttn" type="button" value="Start Game" onclick="displayGame()">
+                    <input id="continueBttn" class="mainMenubttn" type="button" value="Tutorial" onclick="displayTutorial()">
+                    <input id="optionBttn" class="mainMenubttn" type="button" value="Option" onclick="displayOption()">
+                    <input id="creditsBttn" class="mainMenubttn" type="button" value="Credits" onclick="displayCredits()">
+                    <input id="quitBttn" class="mainMenubttn" type="button" value="Quit Game" onclick="exitGame()">
+                </div>
+
+                
+
+                <div id="option" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeOption()">CLOSE</span>
+                        <span>Music <input type="checkbox" checked="true" id="musicOption" onclick="bgmOption()"></span>
+                        <br>
+                        <span>Soundfx <input type="checkbox" checked="true" id="soundOption" onclick="sfxOption()"></span>
+                    </div>
+                </div>
+
+                <div id="prepStation" class="screen">
+                    <div class="background">
+                        <img src="assets/bg/prep_station.jpg">
+                    </div>
+                    <!--order list-->
+                    <div class="order_list">
+                        <div class="current_order" draggable="true">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div class="current_order_icon">
+                                            <img src="" class="current_order_icon_handler">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="current_order_icon">
+                                            <font face="Algerian" size="5"><p class="current_order_count_handler"></p></font>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="current_order_icon">
+                                            <img src="" class="current_order_icon_handler">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="current_order_icon">
+                                            <font face="Algerian" size="5"><p class="current_order_count_handler"></p></font>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="current_order_icon">
+                                            <img src="" class="current_order_icon_handler">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="current_order_icon">
+                                            <font face="Algerian" size="5"><p class="current_order_count_handler"></p></font>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="order2">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div class="small_order_icon">
+                                            <img src="assets/obj/icons/drinks/wine.png" class="order2_icon_handler">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="small_order_icon">
+                                            <font face="Algerian" size="2"><p class="order2_count_handler"></p></font>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="small_order_icon">
+                                            <img src="" class="order2_icon_handler">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="small_order_icon">
+                                            <font face="Algerian" size="2"><p class="order2_count_handler"></p></font>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="small_order_icon">
+                                            <img src="" class="order2_icon_handler">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="small_order_icon">
+                                            <font face="Algerian" size="2"><p class="order2_count_handler"></p></font>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="order3">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div class="small_order_icon">
+                                            <img src="" class="order3_icon_handler">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="small_order_icon">
+                                            <font face="Algerian" size="2"><p class="order3_count_handler"></p></font>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="small_order_icon">
+                                            <img src="" class="order3_icon_handler">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="small_order_icon">
+                                            <font face="Algerian" size="2"><p class="order3_count_handler"></p></font>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="small_order_icon">
+                                            <img src="" class="order3_icon_handler">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="small_order_icon">
+                                            <font face="Algerian" size="2"><p class="order3_count_handler"></p></font>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <!--ingredients around the plate-->
+                    <div id="bbq_sauce" class="sauce" draggable="true">
+                        <img src="assets/obj/ingredients/bbq-sauce.png">
+                    </div>
+                    <div id="hot_sauce" class="sauce" draggable="true">
+                        <img src="assets/obj/ingredients/hot-sauce.png">
+                    </div>
+                    <div id="ranch_dressing" class="sauce" draggable="true">
+                        <img src="assets/obj/ingredients/ranch.png">
+                    </div>
+                    <div id="butter_sauce" class="sauce" draggable="true">
+                        <img src="assets/obj/ingredients/butter-sauce.png">
+                    </div>
+                    <!--tray-->
+                    <div id="assembled">
+                        <div id="drink1" class="assembled_drink" draggable="false">
+                            <img src="" class="drink_handler">
+                        </div>
+                        <div id="drink2" class="assembled_drink" draggable="false">
+                            <img src="" class="drink_handler">
+                        </div>
+                        <div id="sauce1" class="assembled_sauce" draggable="false">
+                            <img src="" class="sauce_handler">
+                        </div>
+                        <div id="sauce2" class="assembled_sauce" draggable="false">
+                            <img src="" class="sauce_handler">
+                        </div>
+                        <div id="side" class="assembled_sides" draggable="false">
+                            <img src="" class="sides_handler">
+                        </div>
+                        <div id="plate" draggable="false">
+                            <img src="" class="plate_handler">
+                        </div>
+                        <img src="assets/obj/plate.png" id="plate-img">
+                    </div>
+                                    
+                    <!--shelf-->
+                    <div class="shelf">
+                        <div class="upgrades" draggable="false"></div>
+                        <div class="upgrades" draggable="false"></div>
+                        <div class="upgrades" draggable="false"></div>
+                        <div class="drinks" id="whiskey" draggable="true">
+                            <img src="assets/obj/drinks/whiskey.png">
+                        </div>
+                        <div class="drinks" id="beer" draggable="true">
+                            <img src="assets/obj/drinks/beer.png">
+                        </div>
+                        <div class="drinks" id="wine" draggable="true">
+                            <img src="assets/obj/drinks/wine.png">
+                        </div>
+                        <div class="sides" id="potato_salad" draggable="true">
+                            <img src="assets/obj/sides/potato-salad.png">
+                        </div>
+                        <div class="sides" id="beans" draggable="true">
+                            <img src="assets/obj/sides/beans.png">
+                        </div>
+                        <div class="sides" id="guacamole" draggable="true">
+                            <img src="assets/obj/sides/guacamole.png">
+                        </div>
+                    </div>
+                    <div class="trash" id="prep_station_trash"></div>
+                    <div id="meatTray">
+                        <img src="assets/obj/grill_tray.png">
+                    </div>
+                    <div id="brisket" class="meat" draggable="false">
+                        <img src="" class="prep_meat_handler">
+                    </div>
+                    <div id="sausage" class="meat" draggable="false">
+                        <img src="" class="prep_meat_handler">
+                    </div>
+                    <div id="ribs" class="meat" draggable="false">
+                        <img src="" class="prep_meat_handler">
+                    </div>
+                </div>
+
+
+                <div id="orderStation" class="screen">
+                    <div class="background">
+                        <img src="assets/bg/order_station.jpg">
+                    </div>
+                    <div id="customer">
+                        <img src="" class="customer_handler" id="customer_handler">
+                    </div>
+                    <div class="customer_order">
+                        <input type="button" value="Take Order" id="take_order_button">
+                        <div id="order_items">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div class="order_icon">
+                                            <img src="" class="order_icon_handler">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="order_icon">
+                                            <font face="Algerian" size="5"><p class="order_count_handler"></p></font>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="order_icon">
+                                            <img src="" class="order_icon_handler">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="order_icon">
+                                            <font face="Algerian" size="5"><p class="order_count_handler"></p></font>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="order_icon">
+                                            <img src="" class="order_icon_handler">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="order_icon">
+                                            <font face="Algerian" size="5"><p class="order_count_handler"></p></font>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>  
+                    <div class="table"></div>
+                    <div id="order_sheet">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="order_icon">
+                                        <img src="" class="order_icon_handler">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="order_icon">
+                                        <font face="Algerian" size="5"><p class="order_count_handler"></p></font>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="order_icon">
+                                        <img src="" class="order_icon_handler">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="order_icon">
+                                        <font face="Algerian" size="5"><p class="order_count_handler"></p></font>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="order_icon">
+                                        <img src="" class="order_icon_handler">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="order_icon">
+                                        <font face="Algerian" size="5"><p class="order_count_handler"></p></font>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+
+                <div id="cookingStation" class="screen">
+                    
+                    <div class="background">
+                        <img src="assets/bg/cooking_station.jpg">
+                    </div>
+                    <div class="order_list">
+                        <div class="current_order" draggable="false">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div class="current_order_icon">
+                                            <img src="" class="current_order_icon_handler">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="current_order_icon">
+                                            <font face="Algerian" size="5"><p class="current_order_count_handler"></p></font>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="current_order_icon">
+                                            <img src="" class="current_order_icon_handler">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="current_order_icon">
+                                            <font face="Algerian" size="5"><p class="current_order_count_handler"></p></font>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="current_order_icon">
+                                            <img src="" class="current_order_icon_handler">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="current_order_icon">
+                                            <font face="Algerian" size="5"><p class="current_order_count_handler"></p></font>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="order2">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div class="small_order_icon">
+                                            <img src="" class="order2_icon_handler">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="small_order_icon">
+                                            <font face="Algerian" size="2"><p class="order2_count_handler"></p></font>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="small_order_icon">
+                                            <img src="" class="order2_icon_handler">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="small_order_icon">
+                                            <font face="Algerian" size="2"><p class="order2_count_handler"></p></font>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="small_order_icon">
+                                            <img src="" class="order2_icon_handler">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="small_order_icon">
+                                            <font face="Algerian" size="2"><p class="order2_count_handler"></p></font>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="order3">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div class="small_order_icon">
+                                            <img src="" class="order3_icon_handler">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="small_order_icon">
+                                            <font face="Algerian" size="2"><p class="order3_count_handler"></p></font>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="small_order_icon">
+                                            <img src="" class="order3_icon_handler">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="small_order_icon">
+                                            <font face="Algerian" size="2"><p class="order3_count_handler"></p></font>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="small_order_icon">
+                                            <img src="" class="order3_icon_handler">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="small_order_icon">
+                                            <font face="Algerian" size="2"><p class="order3_count_handler"></p></font>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="grill" class="grill">
+                        <div class="grill_target" id="grill_target1">
+                            <div class="progress_bar">
+                                <div class="red"></div>
+                                <div class="gray"></div>
+                                <div class="green"></div>
+                            </div>
+                            <img src="" class="grill_handler">
+                        </div>
+                        <div class="grill_target" id="grill_target2">
+                            <div class="progress_bar">
+                                <div class="red"></div>
+                                <div class="gray"></div>
+                                <div class="green"></div>
+                            </div>
+                            <img src="" class="grill_handler">
+                        </div>
+                        <div class="grill_target" id="grill_target3">
+                            <div class="progress_bar">
+                                <div class="red"></div>
+                                <div class="gray"></div>
+                                <div class="green"></div>
+                            </div>
+                            <img src="" class="grill_handler">
+                        </div>
+                        <div class="grill_target" id="grill_target4">
+                            <div class="progress_bar">
+                                <div class="red"></div>
+                                <div class="gray"></div>
+                                <div class="green"></div>
+                            </div>
+                            <img src="" class="grill_handler">
+                        </div>
+                    </div>  
+
+                    <div class="trash" id="cooking_station_trash"></div>
+                    
+                    <div id="meat_tray">
+                        <div id="raw_brisket" class="raw_meat" draggable="true">
+                            <img src="assets/obj/meat/raw/brisket.png">
+                        </div>
+                        <div id="raw_sausage" class="raw_meat" draggable="true">
+                            <img src="assets/obj/meat/raw/sausage-on-table.png">
+                        </div>
+                        <div id="raw_ribs" class="raw_meat" draggable="true">
+                            <img src="assets/obj/meat/raw/ribs.png">
+                        </div>
+                    </div>
+
+                    <div id="cookedMeat">
+                        <img src="assets/obj/grill_tray.png" id="grill_img">
+                    </div>
+                    <div id="cooked_brisket" class="cooked_meat" draggable="false">
+                        <img src="" class="cooked_meat_handler">
+                    </div>
+                    <div id="cooked_sausage" class="cooked_meat" draggable="false">
+                        <img src="" class="cooked_meat_handler">
+                    </div>
+                    <div id="cooked_ribs" class="cooked_meat" draggable="false">
+                        <img src="" class="cooked_meat_handler">
+                    </div>
+                </div>  
+
+                <div id="receivingStation" class="screen">
+                    <div class="background">
+                        <img src="assets/bg/order_station.jpg">
+                    </div>
+                    <div id="customer_receiving">
+                        <img src="" class="customer_handler" id="customer_handler_receiving">
+                    </div>
+
+                    <div class="table"></div>
+
+                    <div id="assembled_receiving">
+                        <div id="drink1_receiving" class="assembled_drink" draggable="false">
+                            <img src="" class="drink_handler">
+                        </div>
+                        <div id="drink2_receiving" class="assembled_drink" draggable="false">
+                            <img src="" class="drink_handler">
+                        </div>
+                        <div id="sauce1_receiving" class="assembled_sauce" draggable="false">
+                            <img src="" class="sauce_handler">
+                        </div>
+                        <div id="sauce2_receiving" class="assembled_sauce" draggable="false">
+                            <img src="" class="sauce_handler">
+                        </div>
+                        <div id="side_receiving" class="assembled_sides" draggable="false">
+                            <img src="" class="sides_handler">
+                        </div>
+                        <div id="plate_receiving" draggable="false">
+                            <img src="" class="plate_handler">
+                        </div>
+                        <img src="assets/obj/plate.png" id="plate-img-receiving">
+                    </div>
+                </div>
+            </div>
+            <div class="display_button">
+                <input type="button" value="Go to Order Station" class="goToButton" id="display_order_station_button" onclick="displayOrderStation()">
+                <input type="button" value="Go to Prep Station" class="goToButton" id="display_prep_station_button" onclick="displayPrepStation()">
+                <input type="button" value="Go to Cooking Station" class="goToButton" id="display_cooking_station_button" onclick="displayCookingStation()">
+            </div>
+        
+        </div>
+        <div id="credits" class="modal">
+            <div id="credits-content" class="modal-content">
+                <span class="close" onclick="closeCredits()">CLOSE</span>
+                <span>
+                    <h3>Flint's Chuckwagon</h3>
+                    <p>This game was created as a project for CS 242, Operating Systems.</p>
+                    <h4>Created by:</h4>
+                    <ul>
+                        <li>Dasallas, Denzel Keneth</li>
+                        <li>Del Mundo, Timothy Jake</li>
+                        <li>Gelordo, Arrabelle Joy</li>
+                    </ul>
+                    <h4>Special Thanks:</h4>
+                    <p>Reegor D. Santos for help with debugging and play testing.</p>
+                    <p>Noel Ed O. De Leon for QA and testing.</p>
+                    <h4>Music Used:</h4>
+                    <ul>
+                        <li>Peter McConnell - Plants vs Zombies 2 - Wild West Theme</li>
+                    </ul>
+                </span>
+            </div>
+        </div>
+        <div id="tutorial" class="modal">
+            <div id="tutorial-content" class="modal-content">
+                <span class="close" onclick="closeTutorial()">CLOSE</span>
+                <span>
+                    <section class="container">
+                        <div class="slider-wrapper">
+                            <div class="slider">
+                                <img id="slide-1" src="assets/tutorial/001.jpg" alt="page 1">
+                                <img id="slide-2" src="assets/tutorial/002.jpg" alt="page 2">
+                                <img id="slide-3" src="assets/tutorial/003.jpg" alt="page 3">
+                                <img id="slide-4" src="assets/tutorial/004.jpg" alt="page 4">
+                                <img id="slide-5" src="assets/tutorial/005.jpg" alt="page 5">
+                                <img id="slide-6" src="assets/tutorial/006.jpg" alt="page 6">
+                                <img id="slide-7" src="assets/tutorial/007.jpg" alt="page 7">
+                                <img id="slide-8" src="assets/tutorial/008.jpg" alt="page 8">
+                                <img id="slide-9" src="assets/tutorial/009.jpg" alt="page 9">
+                                <img id="slide-10" src="assets/tutorial/010.jpg" alt="page 10">
+                                <img id="slide-11" src="assets/tutorial/011.jpg" alt="page 11">
+                            </div>
+                            <div class="slider-nav">
+                                <a href="#slide-1"></a>
+                                <a href="#slide-2"></a>
+                                <a href="#slide-3"></a>
+                                <a href="#slide-4"></a>
+                                <a href="#slide-5"></a>
+                                <a href="#slide-6"></a>
+                                <a href="#slide-7"></a>
+                                <a href="#slide-8"></a>
+                                <a href="#slide-9"></a>
+                                <a href="#slide-10"></a>
+                                <a href="#slide-11"></a>
+                            </div>
+                        </div> 
+                    </section>
+                </span>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
